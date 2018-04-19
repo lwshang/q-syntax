@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>q</string>
+	</array>
+	<key>name</key>
+	<string>q</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>begin</key>
+			<string>^(/)[ \t]*$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>puctuation.definition.comment.begin.q</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>block comment</string>
+			<key>end</key>
+			<string>^(\\)[ \t]*$</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>puctuation.definition.comment.end.q</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>comment.block.q</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>^\\[ \t]*$</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>puctuation.definition.comment.begin.q</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>comment to the end of file</string>
+			<key>end</key>
+			<string>^\z</string>
+			<key>name</key>
+			<string>comment.block.end.q</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.begin.q</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>line comment</string>
+			<key>match</key>
+			<string>(/).*$</string>
+			<key>name</key>
+			<string>comment.line.q</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.q</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>double quoted string</string>
+			<key>end</key>
+			<string>(")|((?:[^\\\n])$)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.q</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>invalid.illegal.newline.q</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.q</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#string-character-escape</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>repository</key>
+	<dict>
+		<key>string-character-escape</key>
+		<dict>
+			<key>match</key>
+			<string>\\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)</string>
+			<key>name</key>
+			<string>constant.character.escape.q</string>
+		</dict>
+	</dict>
+	<key>scopeName</key>
+	<string>source.q</string>
+	<key>uuid</key>
+	<string>bca9b127-2473-d54b-de01-c1000069f009</string>
+</dict>
+</plist>
