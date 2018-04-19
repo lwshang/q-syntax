@@ -38,7 +38,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^\\[ \t]*$</string>
+			<string>^(\\)[ \t]*$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -52,7 +52,7 @@
 			<key>end</key>
 			<string>^\z</string>
 			<key>name</key>
-			<string>comment.block.end.q</string>
+			<string>comment.block.q</string>
 		</dict>
 		<dict>
 			<key>captures</key>

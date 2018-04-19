@@ -1,5 +1,4 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
----
 name: q
 scopeName: source.q
 fileTypes: [q]
@@ -16,8 +15,8 @@ patterns:
     '1': {name: puctuation.definition.comment.end.q}
 
 - comment: comment to the end of file
-  name: comment.block.end.q
-  begin: ^\\[ \t]*$
+  name: comment.block.q
+  begin: ^(\\)[ \t]*$
   beginCaptures:
     '1': {name: puctuation.definition.comment.begin.q}
   end: ^\z
@@ -32,21 +31,15 @@ patterns:
   name: string.quoted.double.q
   begin: '"'
   beginCaptures:
-    '0': { name: punctuation.definition.string.begin.q }
-  end: '(")|((?:[^\\\n])$)'
+    '0': {name: punctuation.definition.string.begin.q}
+  end: (")|((?:[^\\\n])$)
   endCaptures:
-    '1': { name: punctuation.definition.string.end.q }
-    '2': { name: invalid.illegal.newline.q }
+    '1': {name: punctuation.definition.string.end.q}
+    '2': {name: invalid.illegal.newline.q}
   patterns:
   - include: '#string-character-escape'
-    
+
 repository:
   string-character-escape:
     name: constant.character.escape.q
     match: \\(x[0-9A-Fa-f]{2}|[0-2][0-7]{0,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.|$)
-
-
-
-
-
-...
