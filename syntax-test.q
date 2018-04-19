@@ -1,4 +1,4 @@
-// SYNTAX TEST "Packages/q/q.tmLanguage"
+// SYNTAX TEST "Packages/q-syntax/q.tmLanguage"
 /
 // <- source.q comment.block.q puctuation.definition.comment.begin.q
 asd
